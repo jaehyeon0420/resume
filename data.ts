@@ -11,8 +11,8 @@ export const portfolioData: PortfolioData = {
     mainTitle: "3년의 백엔드 기본기 위에 최신 AI 기술로 실무적인 솔루션을 제작하는 AI 엔지니어입니다.",
     sections: [
       {
-        title: "근거를 바탕으로 한 기술적 의사결정",
-        content: "기술적 화려함보다 조직의 성장에 기여하는 실질적인 아키텍처를 설계합니다. 상용 SW의 오픈소스 전환 및 프로세스 자동화 등 구체적인 성과를 통해 기술의 가치를 증명해 왔습니다. 기존 백엔드 역량에 안주하지 않고 LLM과 LangGraph 등 AI 기술을 실무 생산성에 이식하는 혁신을 지속하고 있으며, 동료들과 스터디를 통해 더 단단한 기술적 근거를 쌓아가는 중입니다."
+        title: "지속적인 성장",
+        content: "6명의 다양한 도메인 지식을 가진 동료들과 매주 AI 동향 세미나를 운영하여 변화하는 트렌드를 체화하고 있으며, 기존 백엔드 역량에 안주하지 않고 AI 엔지니어로서의 실무 투입 역량을 기르기 위해 지속적으로 학습하고 있습니다."
       }
     ]
   },
@@ -92,11 +92,11 @@ export const portfolioData: PortfolioData = {
       period: "Jan. 2026 - Feb. 2026 (20 Days)",
       description: [
         "sLLM 및 임베딩 모델 파인튜닝, LangGraph 기반 RAG 시스템 아키텍처 설계",
-        "MNRL을 활용한 임베딩 모델 파인튜닝으로, Positive 데이터셋만으로 상표 분류 Accuracy를 **85%에서 93%로 개선**",
-        "Azure ML 16GB VRAM의 제한된 환경에서 QLoRA 기법을 적용, 하이퍼파라미터(Batch size, Learning Rate 등) 최적화를 통해 법률 도메인 특화 sLLM의 **Training Loss 1.2 수렴** 및 안정적 학습 달성",
-        "LangGraph 기반의 Corrective RAG를 구현하여 검색 결과의 적절성을 자가 검증하고, 저품질 보고서 생성을 원천 차단하여 시스템 신뢰도 확보",
-        "대용량 테이블 파티셔닝 및 데이터 라이프사이클 관리를 도입하여 데이터 누적 방지 및 쿼리 성능 유지",
-        "DB 내 미보유 판례 발생 시 국가법령정보센터 API를 호출하는 실시간 Fallback 로직을 구현하여 답변의 근거 및 최신성 확보"
+        "jina-embedding-v3 모델을, Multiple Negatives Ranking  Loss 손실 함수로 약 3,000개의 Positive 합성 데이터 셋을 학습시키어 상표 분류 Accuracy@5를 **85%**에서 **93%**로 개선",
+        "16GB VRAM의 환경에서 QLoRA 기법 적용과 하이퍼 파라미터 최적화를 통해 법률 도메인 특화 Qwen-2.5의 안정적 Training Loss 수렴 및 RAGAS **Faithfulness 점수 0.87** 달성",
+        "판례 검색 결과와 sLLM 생성 보고서의 적합성을 GPT-5.1 LLM으로 검증하는 LangGraph 기반의 Corrective RAG를 구축하여 시스템 신뢰도 확보",
+        "DB 내 미보유 판례 발생 시 국가법령정보센터 API를 호출하는 Fallback 로직을 구현하여 답변의 근거 및 최신성 확보",
+        "하루 약 2만 건의 수집 상표 테이블 월 단위 파티셔닝 및 3개월 경과 데이터 자동 삭제 스케줄링으로 데이터 누적 방지"
       ],
       blogLink: "https://github.com/jaehyeon0420/tip-project"
     },
@@ -106,11 +106,11 @@ export const portfolioData: PortfolioData = {
       period: "Dec. 2025 - Jan. 2026 (8 Days)",
       description: [
         "백엔드 리드 및 AI 시스템 아키텍처 설계, 서비스 기획",
-        "ONNX-int8 양자화를 통한 모델 경량화를 수행하여, CPU 환경에서도 청크당 **추론 속도를 0.3초로 단축**",
-        "KURE-v1 임베딩 모델을 도입하여 한국어 도메인 특화 문서 검색 **정확도를 30% 이상 향상**",
-        "시스템 아키텍처 설계 및 기술 스택 선정을 주도하고, 모듈형 개발 방식을 도입하여 팀원 간 업무 분배 및 코드 통합 프로세스 효율화",
-        "Redis 기반의 시맨틱 캐시 계층을 설계하여 반복되는 유사 질의에 대한 응답 지연 시간을 최소화하고 시스템 부하 최소화",
-        "Azure Container Apps 기반의 통합 애플리케이션 배포를 통해 트래픽 기반 Auto-scaling 및 고가용성 확보"
+        "BAAI/bge-m3 모델로 파인튜닝된 한국어 특화 임베딩 모델 KURE-v1을 도입하여 text-embedding-3-large 대비 **Precision@10이 20% 향상**",
+        "검색 정확도 향상을 위해 도입한 Cross-Encoder 방식의 bge-reranker 모델 양자화를 통해 CPU 환경에서 검색 문서 당 Scoring 추론 속도를 **7초에서 0.3초로 단축**",
+        "정형 DB Schema 벡터와 사용자 질의 간 코사인 유사도 측정으로 관련 테이블 추출한 후, GPT-4o 기반 Text-to-SQL 로직 구현",
+        "Redis 기반의 시맨틱 캐싱 설계로 90% 이상 유사 질의에 대해 **0.1초 미만으로 응답**하여 시스템 지연 시간 최소화",
+        "정형/비정형 DB 경로를 설정하는 Rouing, 캐싱을 통해 유사 질의에 대한 응답 지연 시간 최소화, reranker 모델 도입으로 검색 정확도 향상 등 시스템 최적화를 위한 아키텍처 설계"
       ],
       blogLink: "https://github.com/jaehyeon0420/deepnexus"
     },
@@ -120,9 +120,10 @@ export const portfolioData: PortfolioData = {
       period: "Nov. 2025 - Nov. 2025 (8 Days)",
       description: [
         "백엔드 개발 및 DevOps 리드",
-        "Azure VM 환경에 Jenkins 기반의 전 자동 배포 파이프라인을 구축하여, **수동 배포 공수 0건** 유지 및 서비스 배포 안정성 확보",
-        "Spring Boot(비즈니스 로직)와 FastAPI(AI 모델 추론)를 분리한 디커플링 아키텍처를 구축하여, PoC 단계의 빈번한 모델 교체 및 독립적 성능 검증 환경 확보",
-        "JWT(Access/Refresh Token) 기반의 인증 로직을 설계하여, Stateless 환경에서의 보안성을 강화하고 사용자 세션 관리 효율화"
+        "Azure Virtual Machine에 Jenkins를 설치 및 구축하여 GitHub Push 이후 Azure Container Apps 배포까지의 과정 자동화",
+        "Spring Boot(Business Logic)와 FastAPI(AI Model Inference)를 분리한 디커플링 아키텍처를 구축하여, PoC 단계에서 잦은 모델 교체에도 백엔드와 모델 추론 로직을 병렬 개발할 수 있는 환경 확보",
+        "서버리스 기반의 Azure Container Apps에 애플리케이션 배포 및 트래픽 기반 Auto-scaling 기능 구현하여 고가용성 확보",
+        "JWT 기반의 인증 로직을 설계하여, Stateless 환경에서의 보안성을 강화하고 사용자 세션 관리 효율화"
       ],
       blogLink: "https://github.com/jaehyeon0420/snapQ-spring"
     },
