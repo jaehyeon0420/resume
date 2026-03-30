@@ -94,7 +94,7 @@ export const portfolioData: PortfolioData = {
         "",
         "차트·표가 이미지로 인코딩된 PDF 특성상 텍스트 청킹만으로는 시각 정보가 벡터 DB에 누락되는 문제를 해결하기 위해, unstructured의 partition_pdf로 세부 이미지를 추출하고 300px 이하 장식성 이미지를 사전 필터링하여 GPT Vision 전처리 대상을 정보성 이미지로 한정",
         "차트·표의 의미를 임베딩에 반영하기 위해 GPT-4.1 Vision에 페이지 이미지와 OCR 텍스트를 함께 입력하여 차트는 마크다운 표로, 통합셀 구조 표는 행·열 관계를 명시한 평문으로 변환하고 원본 이미지 경로를 출처 주석으로 삽입하여 RAG 답변의 근거 추적 가능하도록 설계",
-        "보고서 특화 정답 데이터셋 부재 문제를 GPT-4o 기반 청크별 평가 질문 자동 생성으로 해결하고, Accuracy·Precision·Recall·MRR·NDCG·MAP @k(k=1,3,5,10) 6가지 지표로 전처리 전·후 리트리버를 정량 비교하여 전처리 적용 시 Accuracy@1 기준 **0.44→0.70, 전 지표 평균 18% 이상 향상**"
+        "보고서 특화 정답 데이터셋 부재 문제를 GPT-4o 기반 청크별 평가 질문 자동 생성으로 해결하고, Accuracy·Precision·Recall·MRR·NDCG·MAP @k(k=1,3,5,10) 6가지 지표로 전처리 전·후 리트리버를 정량 비교하여 전처리 적용 시 **전 지표 평균 18% 이상 향상**"
       ],
       blogLink: "https://github.com/jaehyeon0420/Economy-Analysis-RAG"
     },
