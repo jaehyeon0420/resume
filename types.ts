@@ -6,9 +6,8 @@ export interface ContactItem {
 
 export interface EducationItem {
   institution: string;
-  degree: string;
+  degrees: string[];
   period: string;
-  description?: string;
 }
 
 export interface SkillCategory {
@@ -19,7 +18,6 @@ export interface SkillCategory {
 export interface ProjectItem {
   title: string;
   company?: string;
-  period: string;
   description: string[];
   techStack?: string[];
   blogLink?: string; // Optional link for "관련 기술 블로그"
@@ -35,7 +33,6 @@ export interface ExperienceItem {
 
 export interface AboutSection {
   title: string;
-  content: string;
 }
 
 export interface PortfolioData {

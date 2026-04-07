@@ -35,7 +35,7 @@ const HeaderIcons = () => (
 // --- Components ---
 
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="text-2xl font-bold text-gray-800 border-b border-gray-300 pb-3 mb-8">
+  <h2 className="text-2xl font-bold text-gray-800 border-t border-b border-gray-600 pb-3 pt-3 mb-8">
     {children}
   </h2>
 );
@@ -130,8 +130,11 @@ const EducationBlock = ({ item }: { item: EducationItem }) => (
       <h3 className="font-bold text-gray-900 text-lg">{item.institution}</h3>
       <div className="text-sm text-gray-500 font-medium">{item.period}</div>
     </div>
-    <div className="text-base text-gray-700">{item.degree}</div>
-    {item.description && <div className="text-sm text-gray-500 mt-1">• {item.description}</div>}
+    <ul className="list-disc list-outside ml-4 space-y-1.5">
+      {item.degrees.map((degree, idx) => (
+      <li key={idx} className="text-base text-gray-700 leading-relaxed pl-1">{degree}</li>
+      ))}
+    </ul>
   </div>
 );
 
@@ -228,6 +231,16 @@ function App() {
           </div>
         </section>
         
+        {/* Skills */}
+        <section className="mb-24 print:break-before-page">
+          <SectionTitle>Skills</SectionTitle>
+          <div>
+            {skills.map((item, idx) => (
+              <SkillBlock key={idx} item={item} />
+            ))}
+          </div>
+        </section>
+
         {/* Projects */}
         <section className="mb-24 print:break-before-page">
           <SectionTitle>Projects</SectionTitle>
@@ -247,17 +260,7 @@ function App() {
             ))}
           </div>
         </section>
-
-        {/* Skills */}
-        <section className="mb-24 print:break-before-page">
-          <SectionTitle>Skills</SectionTitle>
-          <div>
-            {skills.map((item, idx) => (
-              <SkillBlock key={idx} item={item} />
-            ))}
-          </div>
-        </section>
-        
+                
         {/* Certifications */}
         <section className="mb-24">
           <SectionTitle>Certifications</SectionTitle>
