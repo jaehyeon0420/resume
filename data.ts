@@ -17,9 +17,8 @@ export const portfolioData: PortfolioData = {
   },
   experience: [
     {
-      company: "(주)KH정보교육원",
+      company: "(주)KH정보교육원 [2024.06 - 2025.07]",
       role: "NCS 기반 자바 웹 개발자 양성과정 강사",
-      period: "2024.06 - 2025.07",
       description: [
         "HTML5 / CSS3 / Javascript를 활용한 FrontEnd 강의",
         "Oracle SQL, 데이터베이스 모델링 및 정규화 강의",
@@ -29,9 +28,8 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      company: "(주)한국신용카드결제",
+      company: "(주)한국신용카드결제 [2020.09 - 2024.04]",
       role: "연구소 개발팀 ",
-      period: "2020.09 - 2024.04",
       description: [
         "JSP 약 300개 페이지 ActiveX 종속성 제거 및 크로스 브라우징 환경 구축 : Wisegrid -> IBSheet",
         "Oracle SQL 분석 및 고도화를 통한 시스템 성능 개선",
