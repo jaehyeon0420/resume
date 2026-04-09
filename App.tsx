@@ -183,6 +183,19 @@ const ContactBlock = ({ item }: { item: ContactItem }) => (
   </div>
 );
 
+const MainContactBlock = ({ item }: { item: ContactItem }) => (
+  <div className="mb-6 last:mb-0 break-inside-avoid">
+    <a 
+      href={item.url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-base text-gray-700 hover:text-blue-600 hover:underline flex items-center gap-1 transition-colors"
+    >
+      • {item.value} <ExternalLinkIcon />
+    </a>
+  </div>
+);
+
 function App() {
   const { profile, about, experience, education, skills, projects, certifications, awards, contacts } = portfolioData;
 
@@ -204,8 +217,20 @@ function App() {
           <a href={profile.github} 
              target="_blank" 
              rel="noopener noreferrer" 
-             className="text-base text-gray-700 hover:text-blue-600 hover:underline flex items-center gap-1 transition-colors">
+             className="text-base text-gray-700 hover:text-blue-600 hover:underline items-center transition-colors">
              GitHub <ExternalLinkIcon />
+          </a>&nbsp;|&nbsp;
+          <a href={profile.email} 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             className="text-base text-gray-700 hover:text-blue-600 hover:underline items-center transition-colors">
+             Email <ExternalLinkIcon />
+          </a>&nbsp;|&nbsp;
+          <a href={profile.linkedin} 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             className="text-base text-gray-700 hover:text-blue-600 hover:underline items-center transition-colors">
+             LinkedIn <ExternalLinkIcon />
           </a>
         </header>
 
@@ -221,6 +246,16 @@ function App() {
           </div>
         </section>
         
+        {/* Skills */}
+        <section className="mb-24 print:break-before-page">
+          <SectionTitle>Skills</SectionTitle>
+          <div>
+            {skills.map((item, idx) => (
+              <SkillBlock key={idx} item={item} />
+            ))}
+          </div>
+        </section>
+        
         {/* Work Experience */}
         <section className="mb-24 print:break-before-page">
           <SectionTitle>Work Experience</SectionTitle>
@@ -231,16 +266,7 @@ function App() {
           </div>
         </section>
         
-        {/* Skills */}
-        <section className="mb-24 print:break-before-page">
-          <SectionTitle>Skills</SectionTitle>
-          <div>
-            {skills.map((item, idx) => (
-              <SkillBlock key={idx} item={item} />
-            ))}
-          </div>
-        </section>
-
+        
         {/* Projects */}
         <section className="mb-24 print:break-before-page">
           <SectionTitle>Projects</SectionTitle>

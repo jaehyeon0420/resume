@@ -4,20 +4,21 @@ export const portfolioData: PortfolioData = {
   profile: {
     name: "배재현",
     role: "AI 엔지니어",
-    email: "qowogus0420@gmail.com",
-    github : "https://github.com/jaehyeon0420"    
+    github : "https://github.com/jaehyeon0420",
+    email : "mailto:qowogus0420@gmail.com",
+    linkedin : "https://www.linkedin.com/in/jaehyeon-bae-445a09384/"
   },
   about: {
-    mainTitle: "3년의 백엔드 기본기 위에 최신 AI 기술로 실무적인 솔루션을 제작하는 AI 엔지니어입니다.",
+    mainTitle: "3년의 백엔드 기본기 위에 최신 AI 기술로 서비스와 실무가 연결된 솔루션을 제작하는 AI 엔지니어입니다",
     sections: [
       {
-        title: "6명의 다양한 도메인 지식을 가진 동료들과 매주 AI 동향 세미나를 운영하여 변화하는 트렌드를 체화하고 있으며, 기존 백엔드 역량에 안주하지 않고 AI 엔지니어로서의 실무 투입 역량을 기르기 위해 지속적으로 학습하고 있습니다."
+        title: "백엔드 아키텍처와 LLM 파이프라인을 설계하고 구현한 프로젝트 경험이 있는 AI 엔지니어 입니다. 매주 최신 AI와 산업 동향을 파악하고 이를 개인 프로젝트로 연결하여 적용을 검증하는 Self Developer 입니다. 탄탄한 백엔드 역량을 바탕으로 멀티모달 및 RAG 기술을 실무에 즉시 가치 있게 녹여낼 준비가 되어 있습니다."
       }
     ]
   },
   experience: [
     {
-      company: "(주)KH정보교육원 [2024.06 - 2025.07]",
+      company: "(주)KH정보교육원 [2024.06 - 2025.07, 1년 2개월]",
       role: "NCS 기반 자바 웹 개발자 양성과정 강사",
       description: [
         "HTML5 / CSS3 / Javascript를 활용한 FrontEnd 강의",
@@ -28,7 +29,7 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      company: "(주)한국신용카드결제 [2020.09 - 2024.04]",
+      company: "(주)한국신용카드결제 [2020.09 - 2024.04, 3년 8개월]",
       role: "연구소 개발팀 ",
       description: [
         "JSP 약 300개 페이지 ActiveX 종속성 제거 및 크로스 브라우징 환경 구축 : Wisegrid -> IBSheet",
@@ -63,6 +64,16 @@ export const portfolioData: PortfolioData = {
       institution: "KH정보교육원 [JAVA 웹 개발자 양성 과정]",
       degrees: ["NCS 기반 Java 웹 개발자 양성과정 수강"],
       period: "2020.01 - 2020.07"
+    },
+    {
+      institution: "부천대학교 [컴퓨터소프트웨어공학과]",
+      degrees: ["편입"],
+      period: "2020.03 - 2021.02"
+    },
+    {
+      institution: "부천대학교 [컴퓨터소프트웨어학과]",
+      degrees: [],
+      period: "2014.03 - 2020.02"
     }
   ],
   skills: [
@@ -103,35 +114,37 @@ export const portfolioData: PortfolioData = {
       company: "개인 Project",
       description: [
         "데이터 전처리 파이프라인과 멀티모달 RAG 구축",
-        "슬라이드별 차트 및 그래프 세부 이미지 추출 후, 300px 초과 이미지만 전처리 대상에 포함",
+        "슬라이드별 차트 및 그래프 세부 이미지 추출 후, 300px 초과 이미지만 전처리 대상에 포함 (장식성 이미지 제거)",
         "슬라이드 전체 이미지, 세부 이미지, OCR 텍스트 -> 마크다운과 평문으로 변환 및 ChormaDB 적재",
+        "답변에 부가 정보(차트, 그래프)를 포함시켜 질문자에게 시각적 자료 제공",
         "청크별 질문 2개를 LLM으로 자동 생성하여 평가 데이터 셋 구축",
         "길이 기반 청크 데이터 대비 Accuracy·Precision·Recall·MRR·NDCG·MAP @k(k=1,3,5,10) 전 지표 평균 18% 이상 향상"
       ],
       blogLink: "https://github.com/jaehyeon0420/Economy-Analysis-RAG"
     },
     {
-      title: "AI 기반 상표권 침해 모니터링 시스템 [2026.01 - 2026.02]",
+      title: "LangGraph 기반 Corrective RAG [2026.01 - 2026.02]",
       company: "Microsoft AI School",
       description: [
         "sLLM, 임베딩 모델 파인튜닝, LangGraph 기반 RAG 시스템 아키텍처 설계",
-        "리더보드 및 로컬 테스트 기반 파인튜닝 후보 모델 선정",
-        "임베딩 모델 상표 분류 Accuracy@5를 85%에서 93%로 개선 (jina-embedding-v3)",
+        "STS, Bitext-Mining 지표 상위 2개 모델(jina, multilingual) 비교 테스트 진행 후 파인튜닝 대상 모델 선정",
+        "임베딩 모델 상표 분류 Accuracy@5를 85%에서 93%로 개선하여 고위험 상표 필터링 향상(jina-embedding-v3)",
         "변리사 보고서 생성 sLLM RAGAS Faithfulness 점수 0.87 달성 (Qwen-2.5-7B)",
-        "판례 검색 결과, sLLM 보고서 검증을 위해 LangGraph 기반 Corrective RAG 구축",
-        "DB 미보유 판례 발생 시 국가법령정보센터 API Fallback 로직 구현",
-        "일 2만 건 상표 테이블 월 단위 파티셔닝 및 3개월 경과 데이터 자동 삭제 스케줄링"
+        "LangGraph 기반 자가 검증 루프 도입으로 판례 검색 결과, sLLM 생성 보고서의 적합성 및 신뢰도 확보",
+        "DB 미보유 판례 발생 시 국가법령정보센터 API Fallback 로직 구현으로 최신 정보 제공",
+        "일 2만 건 상표 테이블 월 단위 파티셔닝 및 3개월 경과 데이터 자동 삭제 스케줄링 설정하여 데이터 누적 방지"
       ],
       blogLink: "https://github.com/jaehyeon0420/tip-project"
     },
     {
-      title: "사내 정형/비정형 데이터 통합 Advanced RAG 시스템 [2025.12 - 2026.01]",
+      title: "사내 정형/비정형 데이터 통합 RAG [2025.12 - 2026.01]",
       company: "Microsoft AI School",
       description: [
         "백엔드 리드 및 AI 시스템 아키텍처 설계, 서비스 기획",
-        "reranker 모델 양자화를 통해 추론 속도 단축 (7초->0.3초)",
-        "DB Schema 정보로 GPT-4o 기반 Text-to-SQL 로직 구현",
-        "90% 이상 유사 질의에 대해 0.1초 미만으로 응답 (Redis 시맨틱 캐싱)",
+        "reranker 모델 양자화(bre-reranker-onnx-int8)를 통해 추론 속도 단축 (7초->0.3초)",
+        "DB Schema 정보로 GPT-4o 기반 Text-to-SQL 로직 구현 (Exception 발생 시, 피드백 기반 최대 3회 재시도)",
+        "PostgreSQL RLS 정책 설계(부서, 직급별 제한)로 보안성 강화",
+        "90% 이상 유사 질의에 대해 0.1초 미만으로 응답 (Redis 시맨틱 캐싱. 24시간 TTL)",
         "아키텍처 설계 : 정형/비정형 경로 설정 Routing, 시맨틱 캐싱, reranker 모델 도입"
       ],
       blogLink: "https://github.com/jaehyeon0420/deepnexus"
@@ -142,8 +155,8 @@ export const portfolioData: PortfolioData = {
       description: [
         "백엔드 개발 및 DevOps 리드",
         "Jenkins를 이용하여 CI/CD 환경 구축 (on AzureVM)",
-        "디커플링 아키텍처 구축 (Spring Boot, Fast API)",
-        "서버리스 컨테이너 환경에 애플리케이션 배포 (Azure Container Apps)",
+        "디커플링 아키텍처 구축하여 모델 교체 등 유지보수성 향상(Spring Boot, Fast API)",
+        "서버리스 컨테이너 환경에 애플리케이션 배포하여 고가용성 확보 (Azure Container Apps)",
         "JWT 기반의 인증 로직을 설계하여, Stateless 환경에서의 보안성 강화"
       ],
       blogLink: "https://github.com/jaehyeon0420/snapQ-spring"

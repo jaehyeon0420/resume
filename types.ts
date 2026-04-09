@@ -40,6 +40,7 @@ export interface PortfolioData {
     role: string;
     email: string;
     github: string;
+    linkedin: string;
   };
   about: {
     mainTitle: string;
